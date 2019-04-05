@@ -7,14 +7,14 @@ import {ButtonContainer} from './Button';
 class Navbar extends Component {
     render() {
         return (
-            <NavWrapper className="navbar navber-expand-sm navbar-dark px-sm-5">
+            <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
                 <Link to='/'>
                     <img src={logo} alt="store" className="nav-brand" />
                 </Link>
                 <ul className="navbar-nav aligin-items-center">
                     <li className="nav-item ml-5" >
                         <Link to='/' className="nav-link">
-                            products
+                            Products
                          </Link>
                     </li>
                 </ul>
