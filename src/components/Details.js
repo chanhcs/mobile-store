@@ -30,8 +30,9 @@ class Details extends Component {
                                         made by: <span className="text-uppercase">{company}</span>
                                     </h4>
                                     <h4 className="text-blue">
-                                        price: {price}
-                                        <span>đ</span>
+                                        
+                                        price: <span>$</span> {price}
+                                        
                                     </h4>
              
 
