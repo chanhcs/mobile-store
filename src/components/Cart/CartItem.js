@@ -29,11 +29,11 @@ export default function CartItems({ item, value }) {
                         <div>
                             <span className="btn btn-black mx-1" onClick={() => decrement(id)} >
                                 -
-                                </span>
+                            </span>
                             <span className="btn btn-black mx-1">
                                 {count}
                             </span>
-                            <span className="btn btn-black mx-1" onClick={() => increment(id)} >
+                            <span className="btn btn-black mx-1" onClick={() =>  increment(id)} >
                                 +
                             </span>
                         </div>
