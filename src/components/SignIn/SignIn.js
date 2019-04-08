@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
-import "./SignUp.css";
-import {Link} from 'react-router-dom';
+import "./SignIn.css";
+
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-        name: "",
       email: "",
       password: ""
     };
   }
 
   validateForm() {
-    return this.state.name.length && this.state.email.length > 0 && this.state.password.length > 0;
+    return this.state.email.length > 0 && this.state.password.length > 0;
   }
 
   handleChange = event => {
@@ -28,24 +27,11 @@ export default class Login extends Component {
     event.preventDefault();
   }
 
-  
-
   render() {
     return (
-      <div className="signup">
+      <div className="signIn">
+        <h1 className="text-center" style={{color:'red'}}>Sign In</h1>
         <form onSubmit={this.handleSubmit}>
-
-        <FormGroup controlId="name" size="large">
-            Name
-            <FormControl
-              autoFocus
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-
-
           <FormGroup controlId="email" size="large">
             Email
             <FormControl
@@ -71,8 +57,10 @@ export default class Login extends Component {
                 disabled={!this.validateForm()}
                 type="submit"
             >
-                Sign up
                 
+            Sign in
+            
+         
           </Button>
                         
                    

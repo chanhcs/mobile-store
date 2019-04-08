@@ -1,9 +1,9 @@
 @media all and (min-width: 480px) {
-    .signup {
+    .signUp {
       padding: 60px 0;
     }
   
-    .signup form {
+    .signUp form {
       margin: 0 auto;
       max-width: 320px;
     }

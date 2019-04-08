@@ -39,7 +39,7 @@ class Details extends Component {
                                         <p className="font-weight-bold mt-3 mb0">
                                             some info about product:
                                             </p>
-                                        <p className='text-muted lead' style={{ textAlign: 'justify' }}>
+                                        <p className='text-muted lead text-justify'>
                                             {info}
                                         </p>
                                         {/* buttons */}

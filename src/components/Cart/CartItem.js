@@ -23,7 +23,7 @@ export default function CartItems({ item, value }) {
                 {price}
             </div>
 
-            <div className="col-10 mx-auto col-lg-2">
+    
                 <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
                     <div className="d-flex justify-content-center">
                         <div>
@@ -39,7 +39,7 @@ export default function CartItems({ item, value }) {
                         </div>
                     </div>
                 </div>
-            </div>
+           
 
             <div className="col-10 mx-auto col-lg-2">
                 <div className="cart-icon" onClick={() => removeItem(id)}>
@@ -49,9 +49,9 @@ export default function CartItems({ item, value }) {
             </div>
 
             <div className="col-10 mx-auto col-lg-2">
-                <strong>
+               
                     item total: ${total} 
-                </strong>
+                
             </div>
 
 

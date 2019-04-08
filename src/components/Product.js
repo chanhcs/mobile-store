@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ProductConsumer } from "../Context";
-import ProTypes from "prop-types";
+
 
 class Product extends Component {
     render() {
