@@ -19,7 +19,22 @@ class Navbar extends Component {
                          </Link>
                     </li>
                 </ul>
-                <Link to='/cart' className="ml-auto">
+
+                <Link to='/signup' className="nav-link ml-auto">
+                    
+                    <span>Sign up</span>
+               
+            </Link>
+                <Link to='/login' className="nav-link">
+                    
+                        <span>Sign in</span>
+                   
+                </Link>
+
+                <Link to='/cart' >
+                   
+
+                    
                     <ButtonContainer>
                         <span className="mr-2">
                             <i className="fas fa-cart-plus" />
