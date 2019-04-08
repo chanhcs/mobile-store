@@ -11,11 +11,13 @@ import Details from './components/Details';
 import Modal from './components/Modal';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
+
 class App extends Component {
   render() {
     return (
       <React.Fragment>        
-        <Navbar />        
+        <Navbar />    
+          
         <Switch>
           
           <Route exact path="/" component={ProductList}></Route>
@@ -25,7 +27,7 @@ class App extends Component {
           <Route path="/cart" component={Cart}></Route>
           <Route component={Default}></Route>
         </Switch>
-        <Modal/>      
+        <Modal/>              
       </React.Fragment>
     );
   }
