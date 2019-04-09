@@ -16,10 +16,8 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>        
-        <Navbar />    
-          
-        <Switch>
-          
+        <Navbar />             
+        <Switch>          
           <Route exact path="/" component={ProductList}></Route>
           <Route path="/signIn" component={SignIn} ></Route>
           <Route path="/signUp" component={SignUp} ></Route>

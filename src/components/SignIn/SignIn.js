@@ -1,73 +1,95 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "./SignIn.css";
 
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
 
-export default class Login extends Component {
+
+class SignUp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: "",
-      password: ""
+      email: null,
+      password: null,
+      formErrors: {
+        email: "",
+        password: ""
+      }
     };
   }
 
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
+  handleSubmit = e => {
+    e.preventDefault();
+  };
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
 
-  handleSubmit = event => {
-    event.preventDefault();
-  }
+    switch (name) {
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "Invalid email address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 6 ? "Minimum 6 characaters required" : "";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ formErrors, [name]: value });
+  };
 
   render() {
-    return (
-      <div className="signIn">
-        <h1 className="text-center" style={{color:'red'}}>Sign In</h1>
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" size="large">
-            Email
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" size="large">
-            Password
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
+    const { formErrors } = this.state;
 
-         
-            <Button
-                block
-                size="large"
-                disabled={!this.validateForm()}
-                type="submit"
-            >
-                
-            Sign in
+    return (
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <h1>Sign In</h1>
+          <form onSubmit={this.handleSubmit} noValidate>
             
-         
-          </Button>
-                        
-                   
-            
-         
-        </form>
+            <div className="email">
+              <label htmlFor="email">Email</label>
+              <input
+                className={formErrors.email.length > 0 ? "error" : null}
+                type="email"
+                name="email"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.email.length > 0 && (
+                <span className="errorMessage">{formErrors.email}</span>
+              )}
+            </div>
+            <div className="password">
+              <label htmlFor="password">Password</label>
+              <input
+                className={formErrors.password.length > 0 ? "error" : null}                
+                type="password"
+                name="password"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.password.length > 0 && (
+                <span className="errorMessage">{formErrors.password}</span>
+              )}
+            </div>
+            <div className="signIn">
+              <button type="submit">Sign In</button>
+              <small>Already Have an Account?</small>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
 }
+
+export default SignUp;

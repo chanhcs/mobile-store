@@ -1,84 +1,118 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "./SignUp.css";
 
-export default class Login extends Component {
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
+
+
+
+class SignUp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-       name: "",
-      email: "",
-      password: ""
+      name: null,
+      email: null,
+      password: null,
+      formErrors: {
+        name: "",
+        email: "",
+        password: ""
+      }
     };
   }
 
-  validateForm() {
-    return this.state.name.length && this.state.email.length > 0 && this.state.password.length > 0;
-  }
+  handleSubmit = e => {
+    e.preventDefault();
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+  };
 
-  handleSubmit = event => {
-    event.preventDefault();
-  }
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
 
-  
+    switch (name) {
+      case "name":
+        formErrors.name =
+          value.length < 3 ? "Minimum 3 characaters required" : "";
+        break;
+      
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "Invalid email address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 6 ? "Minimum 6 characaters required" : "";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ formErrors, [name]: value });
+  };
 
   render() {
+    const { formErrors } = this.state;
+
     return (
-      <div className="signUp">
-      <h1 className="text-center" style={{color:'red'}}>Sign Up</h1>
-        <form onSubmit={this.handleSubmit}>
+      <div className="wrapper">
+        <div className="form-wrapper">
+          <h1>Sign Up</h1>
+          <form onSubmit={this.handleSubmit} noValidate>
+            <div className="name">
+              <label htmlFor="name">Name</label>
+              <input
+                className={formErrors.name.length > 0 ? "error" : null}
+                type="text"
+                name="name"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.name.length > 0 && (
+                <span className="errorMessage">{formErrors.name}</span>
+              )}
+            </div> 
 
-        <FormGroup controlId="name" size="large">
-            Name
-            <FormControl
-              autoFocus
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
 
-
-          <FormGroup controlId="email" size="large">
-            Email
-            <FormControl            
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" size="large">
-            Password
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-
-         
-            <Button
-                block
-                size="large"
-                disabled={!this.validateForm()}
-                type="submit"
-            >
-                Sign up
-                
-          </Button>
-                        
-                   
-            
-         
-        </form>
+            <div className="email">
+              <label htmlFor="email">Email</label>
+              <input
+                className={formErrors.email.length > 0 ? "error" : null}
+                type="email"
+                name="email"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.email.length > 0 && (
+                <span className="errorMessage">{formErrors.email}</span>
+              )}
+            </div>
+            <div className="password">
+              <label htmlFor="password">Password</label>
+              <input
+                className={formErrors.password.length > 0 ? "error" : null}               
+                type="password"
+                name="password"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.password.length > 0 && (
+                <span className="errorMessage">{formErrors.password}</span>
+              )}
+            </div>
+            <div className="createAccount">
+              <button type="submit">Sign Up</button>
+              
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
 }
+
+export default SignUp;
