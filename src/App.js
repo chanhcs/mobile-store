@@ -11,21 +11,28 @@ import Details from './components/Details';
 import Modal from './components/Modal';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
+import Footer from './components/Footer';
+
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>        
-        <Navbar />             
+        <Navbar />     
+       
         <Switch>          
+        
           <Route exact path="/" component={ProductList}></Route>
           <Route path="/signIn" component={SignIn} ></Route>
           <Route path="/signUp" component={SignUp} ></Route>
           <Route path="/details" component={Details}></Route>
+          
           <Route path="/cart" component={Cart}></Route>
           <Route component={Default}></Route>
         </Switch>
-        <Modal/>              
+        <Footer />  
+        <Modal/>     
+       
       </React.Fragment>
     );
   }

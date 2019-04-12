@@ -9,26 +9,32 @@ class Cart extends Component {
     render() {
         return (
             <section>
-                <ProductConsumer>
-                    {value => {
-                        const { cart } = value;
-                        if (cart.length > 0) {
-                            return (
-                                <React.Fragment>
-                                    <Title title='your cart' />
-                                    <CartColumns />
-                                    <CartList value={value}/>
-                                    <CartTotals value={value}
+               
+                        <ProductConsumer>
+
+                            {value => {
+                                const { cart } = value;
+                                if (cart.length > 0) {
+                                    return (
+                                        <React.Fragment>
+                                            <Title title='your cart' />
+                                            <CartColumns />
+                                            <CartList value={value} />
+                                            <CartTotals value={value}
                                                 hisroty={this.props.history}
-                                    />
-                                </React.Fragment>
-                            );
-                    }
-                    else {
-                       return <EmptyCart />;
-                    }
-                }}
-                </ProductConsumer>                
+                                            />
+                                        </React.Fragment>
+                                    );
+                                }
+                                else {
+                                    return <EmptyCart />
+                                   
+                                    
+                                        
+                                }
+                            }}
+                        </ProductConsumer>
+                
             </section>
         );
     }

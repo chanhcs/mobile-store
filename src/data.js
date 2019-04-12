@@ -94,6 +94,18 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0
+  },
+  {
+    id: 9,
+    title: "Google Pixel - Black",
+    img: "img/product-1.png",
+    price: 162,
+    company: "GOOGLE",
+    info:
+      "Box and accessories may be generic. Learn more 18W Power Adapter and USB-C to USB-C Cable. Tell it to do things. To start, just say 'OK Google', or touch and hold the Home button. And the more you use it, the more useful it gets. It's your own personal Google, always ready to help Google Allo is a smart messaging app that helps you say more and do more. Bring your personal Google Assistant into your group chats to find restaurants nearby, share videos to watch, and get answers. Google Duo is a simple video calling app that brings you face-to-face with just a tap. ",
+    inCart: false,
+    count: 0,
+    total: 0
   }
 ];
 

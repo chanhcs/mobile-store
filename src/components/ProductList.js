@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Product from "./Product";
-import Title from './Title';
-import {storeProducts} from '../data';
-import {ProductConsumer} from '../Context';
+import { storeProducts } from '../data';
+import { ProductConsumer } from '../Context';
+import Aside from './Aisde/Aside'
+
 
 class ProductList extends Component {
     state = {
@@ -10,26 +11,56 @@ class ProductList extends Component {
     };
 
     render() {
-        
+    
         return (
             <React.Fragment>
-                <div className="py-5">
+                <div className="py-3">
+
+
                     <div className="container">
-                        <Title title="store"/>
-                        <div className="row">
-                            <ProductConsumer>
-                                {value => {
-                                        return value.products.map(product => {
-                                            return <Product key={product.id} product={product}/>;
-                                        })
-                                }}
-                            </ProductConsumer>
+
+                        <div className='row'>
+
+                            <div className='col-md-3 col-lg-3 mx-auto my-3'>
+                                <Aside />
+
+                            </div>
+                            <div className='col-md-9 col-lg-9'>
+
+                                <div className="row">
+
+
+                                    <ProductConsumer>
+                                        {value => {
+                                            return value.products.map(product => {
+                                                return <Product key={product.id} product={product} />;
+                                            })
+                                        }}
+                                   </ProductConsumer>
+
+
+ 
+           
+ 
+
+                                </div>
+
+
+                            </div>
+
+
+
                         </div>
                     </div>
+
                 </div>
+
             </React.Fragment>
         );
-   }
+    }
 }
+
+
+
 
 export default ProductList;

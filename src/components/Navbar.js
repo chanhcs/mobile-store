@@ -64,5 +64,4 @@ const NavWrapper = styled.nav`
     }
 `;
 
-
 export default Navbar;
