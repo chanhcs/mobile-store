@@ -11,20 +11,20 @@ import Details from './components/Details';
 import Modal from './components/Modal';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
-import Footer from './components/Footer';
-
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>        
         <Navbar />     
-       
+       <Header />
         <Switch>          
         
           <Route exact path="/" component={ProductList}></Route>
-          <Route path="/signIn" component={SignIn} ></Route>
-          <Route path="/signUp" component={SignUp} ></Route>
+          {/* <Route path="/signIn" component={SignIn} ></Route>
+          <Route path="/signUp" component={SignUp} ></Route> */}
           <Route path="/details" component={Details}></Route>
           
           <Route path="/cart" component={Cart}></Route>
