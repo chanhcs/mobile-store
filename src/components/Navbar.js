@@ -62,6 +62,11 @@ const NavWrapper = styled.nav`
         font-size:1.3rem;
         text-tranform: capitalize !important;
     }
+    
+     
+    li :hover {
+        color: yellow !important;
+      }
 `;
 
 export default Navbar;

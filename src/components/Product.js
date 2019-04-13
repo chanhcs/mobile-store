@@ -67,7 +67,7 @@ const ProductWrapper = styled.div`
     }
     .card-footer{
         background:transparent;
-        border-top: transparent;
+        border-top: transparent;       
         transition: all 1s linear;
     }   
     &:hover{

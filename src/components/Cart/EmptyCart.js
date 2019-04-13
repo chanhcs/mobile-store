@@ -5,7 +5,7 @@ export default function EmptyCart() {
         <div className='container mt-5'>
             <div className="row">
                 <div className="col-10 mx-auto text-center">
-                    <h1>Your cart is currently empty </h1>
+                    <h3>Your cart is currently empty </h3>
                 </div>
             </div>
         </div>

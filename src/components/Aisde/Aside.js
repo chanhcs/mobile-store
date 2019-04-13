@@ -14,7 +14,6 @@ class Aside extends Component {
                     <div className="list">
                         <nav className="nav flex-column " >
                             <Link to='/' className="nav-link ">Google Pixel - Black</Link>
-
                             <Link to='/' className="nav-link " > Samsung S7</Link>
                             <Link to='/' className="nav-link">HTC 10 - Black</Link>
                             <Link to='/' className="nav-link">HTC 10 - White</Link>

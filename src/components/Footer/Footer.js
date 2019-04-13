@@ -10,9 +10,9 @@ class Footer extends Component {
     render() {
         return (
             <div className="footer" style={{ background: '#292b2c', color: 'gray', fontSize:'14px'}}>
-                <div className="container py-5" >
-                    <div className="row">
-                        <div className="col-md-3 col-lg-3">
+                <div className="container py-5 " >
+                    <div className="row ">
+                        <div className="col-md-3 col-lg-3 ">
                        
                             <h6> CUSTOMER SUPPORT </h6>
                             <hr color='gray'></hr>
@@ -72,14 +72,14 @@ class Footer extends Component {
                             <h6>CONNECT WITH US</h6>                            
                             <hr color='gray'></hr>
                             <div className="container-fluid">
-                                <a target="Blank" href="https://www.facebook.com/pmchanhpk" tabIndex="0" >
+                                <a target="Blank" href="https://www.facebook.com/pmchanhpk" tabIndex="0" style={{marginRight:'7px'}}>
                                      <img style={{ width: '50px', height: '50px'}} alt='Envelope' src={Facebook} />
                                 </a>
-                                <a target="Blank" href="https://www.instagram.com/minhchanh0803" tabIndex="0" >
+                                <a target="Blank" href="https://www.instagram.com/minhchanh0803" tabIndex="0" style={{marginRight:'7px'}}>
 
                                     <img style={{ width: '50px', height: '50px'}} alt='Envelope' src={Instagram} />
                                 </a>
-                                <a target="Blank" href="https://youtube.com" tabIndex="0" >
+                                <a target="Blank" href="https://youtube.com" tabIndex="0" style={{marginRight:'7px'}}>
                                      <img style={{ width: '50px', height: '50px'}} alt='Envelope' src={Youtube} />
                                 </a>
                                

@@ -10,6 +10,12 @@
   }
 
 .title {
-    color: blue;
+    color: black;
     cursor: pointer;
+}
+.nav-link {
+    color: black !important;
+}
+nav :hover {
+        color: gray !important;
 }
