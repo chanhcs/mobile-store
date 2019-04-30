@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { ButtonContainer } from './Button';
 class Navbar extends Component {
     render() {
+        
         return (
             <NavWrapper className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top" >
                 <button className="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">

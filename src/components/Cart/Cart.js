@@ -14,6 +14,7 @@ class Cart extends Component {
 
                             {value => {
                                 const { cart } = value;
+                               
                                 if (cart.length > 0) {
                                     return (
                                         <React.Fragment>
