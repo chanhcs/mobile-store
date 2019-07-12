@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import aside from './aside.png'
 import './Aside.css';
 
 class Aside extends Component {
@@ -14,6 +15,7 @@ class Aside extends Component {
                     </div>
                     <div className="list">
                         <nav className="nav flex-column " >
+                            <img alt='aside' style={{marginBottom: "40px", marginTop: "30px"}} src={aside} width="200px" height="150px"/>
                             <Link to='/' className="nav-link ">Google Pixel - Black</Link>
                             <Link to='/' className="nav-link " > Samsung S7</Link>
                             <Link to='/' className="nav-link">HTC 10 - Black</Link>
