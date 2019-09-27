@@ -15,7 +15,8 @@ class Aside extends Component {
                     </div>
                     <div className="list">
                         <nav className="nav flex-column " >
-                            <img alt='aside' style={{marginBottom: "40px", marginTop: "30px"}} src={aside} width="200px" height="150px"/>
+                            <img alt='aside' style={{marginBottom: "40px", marginTop: "30px"}} src={aside} width="250px" height="180px"/>
+                            <Link to='/' className="nav-link ">Iphone 11 Pro Max</Link>
                             <Link to='/' className="nav-link ">Google Pixel - Black</Link>
                             <Link to='/' className="nav-link " > Samsung S7</Link>
                             <Link to='/' className="nav-link">HTC 10 - Black</Link>
@@ -24,7 +25,6 @@ class Aside extends Component {
                             <Link to='/' className="nav-link">Vintage Iphone</Link>
                             <Link to='/' className="nav-link">Iphone 7</Link>
                             <Link to='/' className="nav-link">Smashed Iphone</Link>
-
                         </nav>
                     </div>
 
