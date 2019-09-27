@@ -1,12 +1,12 @@
 export const storeProducts = [
   {
     id: 1,
-    title: "Google Pixel - Black",
+    title: "Iphone 11 Pro Max",
     img: "img/product-1.png",
-    price: 162,
-    company: "GOOGLE",
+    price: 1449,
+    company: "Apple",
     info:
-      "Box and accessories may be generic. Learn more 18W Power Adapter and USB-C to USB-C Cable. Tell it to do things. To start, just say 'OK Google', or touch and hold the Home button. And the more you use it, the more useful it gets. It's your own personal Google, always ready to help Google Allo is a smart messaging app that helps you say more and do more. Bring your personal Google Assistant into your group chats to find restaurants nearby, share videos to watch, and get answers. Google Duo is a simple video calling app that brings you face-to-face with just a tap. ",
+      "Offer great protections for your phone, easy fit and convenient installation.Fashion design keeps your Phone private and feels goodShock absorbent, shatterproof, and anti-scratch material.Added protection against accidental drops. It protects your Phone back and frame from Fingerprints, Scratches, Dusts, Collisions And Abrasion. Super thin, lightweight, extra grip, soft comfortable hand touching feel, Particularly design , It Perfectly matches with your Phone's shape.",
     inCart: false,
     count: 0,
     total: 0
@@ -98,7 +98,7 @@ export const storeProducts = [
   {
     id: 9,
     title: "Google Pixel - Black",
-    img: "img/product-1.png",
+    img: "img/product-9.png",
     price: 162,
     company: "GOOGLE",
     info:
