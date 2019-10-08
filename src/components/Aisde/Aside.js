@@ -4,13 +4,12 @@ import aside from './aside.png'
 import './Aside.css';
 
 class Aside extends Component {
-    render() {
- 
+    render() { 
         return (
             <div>
                 <div className="aside" >
                     <div className="container" >
-                        <h3 className="title" >Phone</h3>
+                        <h3 className="title" >Mobile</h3>
                         <hr></hr>
                     </div>
                     <div className="list">
